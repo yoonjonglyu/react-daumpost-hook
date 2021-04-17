@@ -96,8 +96,7 @@ ReactDaumPost Hook을 실행시킬때 임의의 config객체를 인자로 넘겨
 ```
 자세한 내용은 [Daum Postcode API 가이드](http://postcode.map.daum.net/guide#usage)에서 참고해주시길 바랍니다.
 
-4. **onComplete (?function)** : 포스트 API 검색 결과를 처리할 함수를 넘겨주시길바랍니다.   
-***기본 값은 (data) => console.log(data)***입니다.
+4. **onComplete (?function)** : 포스트 API 검색 결과를 처리할 함수를 넘겨주시길바랍니다. 기본 값은 (data) => console.log(data)입니다.
 
 ***ref, apiUrl, method, onComplete 4가지 인자***를 객체 프로퍼티로 해당 커스텀훅에 넘겨서 사용 할 수 있으며 해당 인자들은 모두 선택사항이며  
 ***반드시 필요한 속성은 검색결과를 처리할 onComplete 하나***입니다. ref를 통해서 원하는 위치에 검색창을 삽입하시거나 팝업방식으로 간단히 API를  
