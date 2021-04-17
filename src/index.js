@@ -1,4 +1,4 @@
-import ReactDaumPost from './src/reactDaumPostHook';
+import ReactDaumPost from './reactDaumPostHook';
 
 export { ReactDaumPost };
 export default ReactDaumPost;
