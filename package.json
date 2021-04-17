@@ -1,6 +1,6 @@
 {
   "name": "react-daumpost-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "다음 포스트 코드 API 커스텀훅",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,10 @@
     "postcode",
     "hook"
   ],
-  "files": ["src", "index.js"],
+  "files": [
+    "src",
+    "index.js"
+  ],
   "author": "ISA",
   "license": "MIT",
   "bugs": {
