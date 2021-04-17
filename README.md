@@ -1,4 +1,4 @@
-# React-Postcode-Hook
+# react-daumpost-hook
 
 [다음 우편 번호 API](http://postcode.map.daum.net/guide)를 리액트에서 커스텀 훅 방식으로 제공하는 라이브러리.
 
@@ -6,14 +6,14 @@
 ## 설치
 
 ```shell
-npm install --save react-postcode-hook
+npm install --save react-daumpost-hook
 ```
 
 ## 사용법
 
 ```js
 import React, { useRef } from 'react';
-import ReactPostCodeHook from 'react-postcode-hook';
+import ReactDaumPost from 'react-daumpost-hook';
 
 const App = function () {
     const ref = useRef(null);
@@ -26,7 +26,7 @@ const App = function () {
         ref : ref,
         onComplete : on
     };
-    const postCode = ReactPostCodeHook(postConfig);
+    const postCode = ReactDaumPost(postConfig);
    
     return (
         <main>
@@ -42,7 +42,7 @@ const App = function () {
 
 ```js
 import React, { useRef } from 'react';
-import ReactPostCodeHook from 'react-postcode-hook';
+import ReactDaumPost from 'react-daumpost-hook';
 import { useForm } from 'react-hook-form';
 
 
@@ -59,7 +59,7 @@ const App = function () {
         ref : ref,
         onComplete : on
     };
-    const postCode = ReactPostCodeHook(postConfig);
+    const postCode = ReactDaumPost(postConfig);
    
     return (
         <main>
