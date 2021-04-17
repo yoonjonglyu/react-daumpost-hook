@@ -1,6 +1,6 @@
 {
   "name": "react-daumpost-hook",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "다음 포스트 코드 API 커스텀훅",
   "main": "index.js",
   "scripts": {
