@@ -81,7 +81,7 @@ ReactDaumPost Hook을 실행시킬때 임의의 config객체를 인자로 넘겨
 
 ### CONFIG 구성
 
-1. **ref** (?DOM) : 다음 API 포스트코드 검색창을 삽입시킬 컴포넌트입니다. useRef를 통해서 셀렉한 NODE를 넘기며, 해당 인자를 사용하지 않으시면
+1. **ref** (?ref) : 다음 API 포스트코드 검색창을 삽입시킬 컴포넌트입니다. useRef를 통해서 셀렉한 ref를 넘깁니다., 해당 인자를 사용하지 않으시면
 자동으로 우편코드 검색 창을 팝업 방식으로 띄웁니다.
 2. **apiUrl** (?string) : 다음 API 스크립트 경로입니다. 선택사항이며 제공되는 API 경로가 변경된 경우 해당 값으로 변경해주시면 됩니다.
 기본값은 "t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" 입니다.
