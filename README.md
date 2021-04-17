@@ -107,4 +107,4 @@ ReactDaumPost Hook을 실행시킬때 임의의 config객체를 인자로 넘겨
 
 ### License
 
-react-postcode-hook is [MIT licensed](./LICENSE).
+react-daumpost-hook is [MIT licensed](./LICENSE).
