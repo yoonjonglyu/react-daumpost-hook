@@ -1,0 +1,25 @@
+{
+  "name": "react-postcode-hook",
+  "version": "1.0.0",
+  "description": "다음 포스트 코드 API 커스텀훅",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoonjonglyu/react-postcode-hook.git"
+  },
+  "keywords": [
+    "react",
+    "daum",
+    "postcode",
+    "hook"
+  ],
+  "author": "ISA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoonjonglyu/react-postcode-hook/issues"
+  },
+  "homepage": "https://github.com/yoonjonglyu/react-postcode-hook#readme"
+}
