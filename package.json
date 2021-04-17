@@ -1,14 +1,14 @@
 {
-  "name": "react-postcode-hook",
+  "name": "react-daumpost-hook",
   "version": "1.0.0",
   "description": "다음 포스트 코드 API 커스텀훅",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yoonjonglyu/react-postcode-hook.git"
+    "url": "git+https://github.com/yoonjonglyu/react-daumpost-hook.git"
   },
   "keywords": [
     "react",
@@ -16,13 +16,13 @@
     "postcode",
     "hook"
   ],
-  "files": ["src"],
+  "files": ["src", "index.js"],
   "author": "ISA",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yoonjonglyu/react-postcode-hook/issues"
+    "url": "https://github.com/yoonjonglyu/react-daumpost-hook/issues"
   },
-  "homepage": "https://github.com/yoonjonglyu/react-postcode-hook#readme",
+  "homepage": "https://github.com/yoonjonglyu/react-daumpost-hook#readme",
   "dependencies": {
     "react": "^17.0.2"
   }
