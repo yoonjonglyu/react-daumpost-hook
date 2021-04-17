@@ -2,7 +2,8 @@
   "name": "react-daumpost-hook",
   "version": "1.0.5",
   "description": "다음 포스트 코드 API 커스텀훅",
-  "main": "index.js",
+  "main": "src/index.js",
+  "types" : "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
