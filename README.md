@@ -28,6 +28,8 @@ const App = function () {
         ref : ref,
         onComplete : (data) => {
             console.log(data);
+            // 검색후 해당 컴포넌트를 다시 안보이게 하는 부분
+            ref.current.style.display= "none";
         }
     };
     const postCode = ReactDaumPost(postConfig);
@@ -57,8 +59,11 @@ const App = function () {
     const postConfig = {
         ref : ref,
         onComplete : (data) => {
-        setValue('test', "tasdasdsasd");
-        handleSubmit((data) => console.log(data))();
+            // 데이터를 받아와서 Set해주는 부분
+            setValue('address', data.address);
+            handleSubmit((data) => console.log(data))();
+            // 검색후 해당 컴포넌트를 다시 안보이게 하는 부분
+            ref.current.style.display= "none";
         }
     };
     const postCode = ReactDaumPost(postConfig);
