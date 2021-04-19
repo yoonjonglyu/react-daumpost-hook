@@ -35,6 +35,8 @@ const ReactPostCodeHook = function (props) {
             onresize: function (size) {
                 ref.current.style.height = size.height + 'px';
             },
+            width : "100%",
+            height : "100%",
             ...__method
         }).embed(ref.current);
         ref.current.style.display = 'block';
