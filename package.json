@@ -22,7 +22,10 @@
     "커스텀훅",
     "daum address",
     "address",
-    "korea"
+    "korea",
+    "daum postcode",
+    "kakao postcode",
+    "kakao address"
   ],
   "files": [
     "src",
