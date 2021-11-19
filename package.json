@@ -1,7 +1,7 @@
 {
   "name": "react-daumpost-hook",
   "version": "1.1.1",
-  "description": "다음 포스트 코드 API 커스텀훅",
+  "description": "다음 카카오에서 무료로 제공하는  우편번호(주소찾기) API를 쉽게 기존 코드에 연결 할 수 있는 hook 패키지 입니다.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
@@ -15,7 +15,14 @@
     "react",
     "daum",
     "postcode",
-    "hook"
+    "hook",
+    "kakao",
+    "우편번호",
+    "주소찾기",
+    "커스텀훅",
+    "daum address",
+    "address",
+    "korea"
   ],
   "files": [
     "src",
