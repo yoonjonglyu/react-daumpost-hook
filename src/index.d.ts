@@ -12,12 +12,12 @@ declare module 'react-daumpost-hook' {
     const ReactDaumPost: ReactDaumPost
 
     interface ReactDaumPost {
-        (config: ReactDaumPostProps): VoidFunction
+        (config?: ReactDaumPostProps): VoidFunction
     }
 
     interface ReactDaumPostProps {
         ref?: React.MutableRefObject<any>,
-        onComplete?: Function,
+        onComplete: VoidFunction,
         apiUrl?: string,
         method?: Object
     }

@@ -1,4 +1,4 @@
-const ReactPostCodeHook = function (props) {
+function daumPostCodeHook(props) {
     const {
         ref,
         apiUrl,
@@ -52,4 +52,4 @@ const ReactPostCodeHook = function (props) {
     return getPostCode;
 }
 
-export default ReactPostCodeHook;
+export default daumPostCodeHook;
