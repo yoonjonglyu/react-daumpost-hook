@@ -12,7 +12,7 @@
 ## 설치
 
 ```shell
-npm install --save react-daumpost-hook
+npm install react-daumpost-hook
 ```
 
 ## 사용법
@@ -25,8 +25,11 @@ const App = function () {
     const ref = useRef(null);
 
     const postConfig = {
-        ref : ref,
+        ref : ref, //팝업창으로 사용시 해당 파라메터를 없애면 된다.
         onComplete : (data) => {
+            /* 
+                우편 번호 처리하는 로직
+            */
             console.log(data);
             // 검색후 해당 컴포넌트를 다시 안보이게 하는 부분
             ref.current.style.display= "none";
@@ -57,7 +60,7 @@ const App = function () {
     const ref = useRef(null);
     
     const postConfig = {
-        ref : ref,
+        ref : ref, //팝업창으로 사용시 해당 파라메터를 없애면 된다.
         onComplete : (data) => {
             // 데이터를 받아와서 Set해주는 부분
             setValue('address', data.address);
@@ -83,9 +86,11 @@ const App = function () {
 ```js
 import ReactDaumPost from 'react-daumpost-hook';
 ```
-에서 불러온 ReactDaumPost 함수를 실행시키면 다음 우편 주소 API 스크립트를 로딩하며 해당 주소 API를 실행 시킬 수 있는 함수를 반환합니다.
+에서 불러온 ReactDaumPost 함수를 실행시키면 다음 우편 주소 API 스크립트를 html에 삽입하며 해당 주소 API를 실행 시킬 수 있는 함수를 반환합니다.
 반환 된 함수를 원하시는 컴포넌트의 이벤트에 연결하시면 다음 우편주소 API를 사용 하실 수 있습니다.
-ReactDaumPost Hook을 실행시킬때 임의의 config객체를 인자로 넘겨서 API를 설정합니다.
+ReactDaumPost Hook을 실행시킬때 임의의 config객체를 인자로 넘겨서 API를 설정합니다.  
+* 해당 패키지의 경우 순수 js 함수이기에 typescript를 사용하지 않으신다면 어디서 사용하셔도 상관 없습니다.  
+타입스크립트의 경우 리액트 타입 기반으로 타입추론을 하고 있습니다.
 
 ### CONFIG 구성
 
