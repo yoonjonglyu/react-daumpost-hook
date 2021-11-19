@@ -1,6 +1,6 @@
 {
   "name": "react-daumpost-hook",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "다음 포스트 코드 API 커스텀훅",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -28,7 +28,6 @@
   },
   "homepage": "https://github.com/yoonjonglyu/react-daumpost-hook#readme",
   "dependencies": {
-    "prop-types": "^15.7.2",
     "react": "^17.0.2"
   }
 }

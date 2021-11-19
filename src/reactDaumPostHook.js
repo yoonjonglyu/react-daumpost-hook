@@ -8,7 +8,7 @@ const ReactPostCodeHook = function (props) {
 
     // 내부 변수들 더블 언더바 를 prefix로 사용
     const __postcodeUrl = apiUrl !== undefined ? apiUrl : "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
-    const __scriptId = "DPCKAKAO#$%!@#@@$@#@$#";
+    const __scriptId = "daumpostcodemapv2";
     const __method = method !== undefined ? method : {};
     const __onComplete = onComplete !== undefined ? onComplete : (data) => console.log(data);
 
@@ -21,28 +21,28 @@ const ReactPostCodeHook = function (props) {
         document.body.appendChild(__postCodeScript);
     }
 
-    const getPostCode = function () {
-        if(ref === undefined){
+    const getPostCode = () => {
+        if (ref === undefined) {
             getPostCodePopup();
         } else {
             getPostCodeEmbed();
         }
     }
 
-    const getPostCodeEmbed = function (){
+    const getPostCodeEmbed = () => {
         new window.daum.Postcode({
             oncomplete: __onComplete,
             onresize: function (size) {
                 ref.current.style.height = size.height + 'px';
             },
-            width : "100%",
-            height : "100%",
+            width: "100%",
+            height: "100%",
             ...__method
         }).embed(ref.current);
         ref.current.style.display = 'block';
     }
 
-    const getPostCodePopup = function (){
+    const getPostCodePopup = () => {
         new window.daum.Postcode({
             oncomplete: __onComplete,
             ...__method
