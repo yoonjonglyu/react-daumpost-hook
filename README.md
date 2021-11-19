@@ -17,37 +17,34 @@ npm install react-daumpost-hook & yarn add react-daumpost-hook
 
 ## 사용법
 
+### 팝업
 ```js
-import React, { useRef } from 'react';
+import React from 'react';
 import ReactDaumPost from 'react-daumpost-hook';
 
 const App = function () {
     const ref = useRef(null);
 
     const postConfig = {
-        ref : ref, //팝업창으로 사용시 해당 파라메터를 없애면 된다.
+        // 팝업창으로 사용시 ref: userRef()
         onComplete : (data) => {
             /* 
                 우편 번호 처리하는 로직
             */
-            console.log(data);
-            // 검색후 해당 컴포넌트를 다시 안보이게 하는 부분
-            ref.current.style.display= "none";
         }
     };
     const postCode = ReactDaumPost(postConfig);
    
     return (
         <main>
-            test
-            <input type="text"  onClick={() => postCode()} />
-            <div ref={ref}></div>
+            우편번호찾기
+            <input type="text"  onClick={postCode} />
         </main>
     );
 };
 ```
 
-### react-hook-form을 같이 쓸 경우
+### 기존 DOM에 삽입 + react-hook-form을 같이 쓸 경우
 
 ```js
 import React, { useRef } from 'react';
@@ -73,9 +70,9 @@ const App = function () {
    
     return (
         <main>
-            test
-            <input type="text"  onClick={() => postCode()} />
-            <div ref={ref}></div>
+            우편번호찾기
+            <input type="text"  onClick={postCode} />
+            <div ref={ref}>/* 이곳에 검색창이 삽입 됩니다.*/</div>
         </main>
     );
 };
@@ -94,7 +91,7 @@ ReactDaumPost Hook을 실행시킬때 임의의 config객체를 인자로 넘겨
 
 ### CONFIG 구성
 
-1. **ref (?ref)** : 다음 API 포스트코드 검색창을 삽입시킬 컴포넌트입니다. useRef를 통해서 셀렉한 ref를 넘깁니다., **해당 속성을 비워두시면 자동으로 우편코드 검색 창을 팝업 방식**으로 띄웁니다.
+1. **ref (?ref)** : 다음 우편번호 찾기 검색창을 삽입시킬 컴포넌트입니다. useRef를 통해서 셀렉한 ref를 넘깁니다., **해당 속성을 비워두시면 자동으로 우편코드 검색 창을 팝업 방식**으로 띄웁니다.
 2. **apiUrl (?string)** : 다음 API 스크립트 경로입니다. 선택사항이며 제공되는 API 경로가 변경된 경우 해당 값으로 변경해주시면 됩니다.
 **기본값은 "t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"** 입니다.
 3. **method (?object)** : 다음 API에서 제공되는 **생성자들을 사용하실 경우 제공되는 인터페이스**입니다. 아래와 같이 객체를 생성하여서 method 인수로 넘겨주시면됩니다. 
