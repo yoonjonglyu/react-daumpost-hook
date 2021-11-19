@@ -91,13 +91,16 @@ ReactDaumPost Hook을 실행시킬때 임의의 config객체를 인자로 넘겨
 * 해당 패키지의 경우 순수 js 함수이기에 Typescript를 사용하지 않으시고 팝업 방식으로 쓰신다면 어디서 사용하셔도 상관 없습니다.  
 타입스크립트의 사용시 리액트 기반으로 타입추론을 하고 있습니다.
 
-### CONFIG 구성
+### CONFIG props
 > config자체를 넘기지 않을 경우 console에 검색결과를 출력 합니다.  
 
-1. `**ref (?ref)**` : 다음 우편번호 찾기 검색창을 삽입시킬 컴포넌트입니다. useRef를 통해서 셀렉한 ref를 넘깁니다., **해당 속성을 비워두시면 자동으로 우편코드 검색 창을 팝업 방식**으로 띄웁니다.
-2. `**apiUrl (?string)**` : 다음 API 스크립트 경로입니다. 선택사항이며 제공되는 API 경로가 변경된 경우 해당 값으로 변경해주시면 됩니다.
-**기본값은 "t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"** 입니다.
-3. `**method (?object)**` : 다음 API에서 제공되는 **생성자들을 사용하실 경우 제공되는 인터페이스**입니다. 아래와 같이 객체를 생성하여서 method 인수로 넘겨주시면됩니다. 
+1. **`ref (?ref)`** : 다음 우편번호 찾기 검색창을 삽입시킬 컴포넌트입니다. useRef를 통해서 셀렉한 ref를 넘깁니다., **해당 속성을 비워두시면 자동으로 우편코드 검색 창을 팝업 방식**으로 띄웁니다.  
+  
+2. **`apiUrl (?string)`** : 다음 API 스크립트 경로입니다. 선택사항이며 제공되는 API 경로가 변경된 경우 해당 값으로 변경해주시면 됩니다.
+**`기본값은 "t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"`** 입니다.  
+  
+3. **`method (?object)`** : 다음 API에서 제공되는 **생성자들을 사용하실 경우 제공되는 인터페이스**입니다. 아래와 같이 객체를 생성하여서 method 인수로 넘겨주시면됩니다.  
+  
 ```js
 {
     onresize: function(size) {
@@ -109,12 +112,13 @@ ReactDaumPost Hook을 실행시킬때 임의의 config객체를 인자로 넘겨
 ```
 자세한 내용은 [Daum Postcode API 가이드](http://postcode.map.daum.net/guide#usage)에서 참고해주시길 바랍니다.
 
-4. `**onComplete (function)**` : API 검색 결과를 처리할 함수를 넘겨주시길바랍니다. `config 자체를 안넘길 경우 기본 값은 (data) => console.log(data)입니다.`
-
+4. **`onComplete (function)`** : API 검색 결과를 처리할 함수를 넘겨주시길바랍니다. `config 자체를 안넘길 경우 기본 값은 (data) => console.log(data)입니다.`  
+  
+    
 ***ref, apiUrl, method, onComplete 4가지 인자***를 `config` 프로퍼티로 해당 커스텀훅에 넘겨서 API를 설정할 수 있습니다.  
 4가지 중 ***반드시 필요한 속성은 검색결과를 처리할 onComplete 하나***입니다. 를 통해서 원하는 위치에 검색창을 삽입하시거나 팝업방식으로 간단히 API를 이용가능하니 참고하셔서 사용해주시고 문의가 있을시 해당 Git Repo에 이슈로 등록해주시길 바랍니다.
 
 
-### License
+### LICENSE
 
 react-daumpost-hook is [MIT licensed](./LICENSE).
