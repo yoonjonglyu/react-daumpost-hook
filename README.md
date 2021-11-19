@@ -12,7 +12,9 @@
 ## 설치
 
 ```shell
-npm install react-daumpost-hook & yarn add react-daumpost-hook
+npm install react-daumpost-hook 
+//or
+ yarn add react-daumpost-hook
 ```
 
 ## 사용법
