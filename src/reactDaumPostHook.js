@@ -14,11 +14,11 @@ function daumPostCodeHook(props) {
 
 
     // 스크립트가 없을시 로드 해오는 부분
-    if (!document.getElementById(__scriptId)) {
+    if (document.getElementById(__scriptId) === null) {
         const __postCodeScript = document.createElement('script');
         __postCodeScript.id = __scriptId;
         __postCodeScript.src = __postcodeUrl;
-        document.body.appendChild(__postCodeScript);
+        document.head.appendChild(__postCodeScript);
     }
 
     const getPostCode = () => {
