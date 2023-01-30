@@ -1,26 +1,67 @@
 import React from 'react';
 
-export { };
+export {};
 declare global {
-    interface Window {
-        daum?: any;
-    }
-
+  interface Window {
+    daum?: any;
+  }
 }
 
 declare module 'react-daumpost-hook' {
-    const ReactDaumPost: ReactDaumPost
+  const ReactDaumPost: ReactDaumPost;
 
-    interface ReactDaumPost {
-        (config?: ReactDaumPostProps): VoidFunction
-    }
+  interface ReactDaumPost {
+    (config?: ReactDaumPostProps): VoidFunction;
+  }
 
-    interface ReactDaumPostProps {
-        ref?: React.MutableRefObject<any>,
-        onComplete: VoidFunction,
-        apiUrl?: string,
-        method?: Object
-    }
+  interface ReactDaumPostProps {
+    ref?: React.MutableRefObject<any>;
+    onComplete: (state: PostStateProps) => VoidFunction;
+    apiUrl?: string;
+    method?: Object;
+  }
 
-    export default ReactDaumPost;
+  interface PostStateProps {
+    postcode: string;
+    postcode1: string;
+    postcode2: string;
+    postcodeSeq: string;
+    zonecode: string;
+    address: string;
+    addressEnglish: string;
+    addressType: string;
+    bcode: string;
+    bname: string;
+    bnameEnglish: string;
+    bname1: string;
+    bname1English: string;
+    bname2: string;
+    bname2English: string;
+    sido: string;
+    sidoEnglish: string;
+    sigungu: string;
+    sigunguEnglish: string;
+    sigunguCode: string;
+    userLanguageType: string;
+    query: string;
+    buildingName: string;
+    buildingCode: string;
+    apartment: string;
+    jibunAddress: string;
+    jibunAddressEnglish: string;
+    roadAddress: string;
+    roadAddressEnglish: string;
+    autoRoadAddress: string;
+    autoRoadAddressEnglish: string;
+    autoJibunAddress: string;
+    autoJibunAddressEnglish: string;
+    userSelectedType: string;
+    noSelected: string;
+    hname: string;
+    roadnameCode: string;
+    roadname: string;
+    roadnameEnglish: string;
+  }
+
+  export default ReactDaumPost;
 }
