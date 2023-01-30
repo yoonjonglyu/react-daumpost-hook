@@ -18,7 +18,12 @@ declare module 'react-daumpost-hook' {
     ref?: React.MutableRefObject<any>;
     onComplete: (state: PostStateProps) => VoidFunction;
     apiUrl?: string;
-    method?: Object;
+    method?: {
+      onresize?: (size: { width: number; height: number }) => void;
+      onclose?: (state: 'FORCE_CLOSE' | 'COMPLETE_CLOSE') => void;
+      onsearch?: (data: { q: string; count: number }) => void;
+    };
+    config?: any;
   }
 
   interface PostStateProps {
