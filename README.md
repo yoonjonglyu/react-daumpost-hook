@@ -93,8 +93,8 @@ import ReactDaumPost from 'react-daumpost-hook';
   팝업 방식으로 쓰신다면 js 기반 프로젝트라면 어디서든 상관 없습니다.  
   다만 타입스크립트의 사용시 리액트 기반으로 타입추론을 하고 있습니다.
 
-### PROPS
-
+### Props
+>  
 > config자체를 넘기지 않을 경우 console에 검색결과를 출력 합니다.
 
 1. **`ref (?ref)`** : 다음 우편번호 찾기 검색창을 삽입시킬 컴포넌트입니다. useRef를 통해서 셀렉한 ref를 넘깁니다., **해당 속성을 비워두시면 자동으로 우편코드 검색 창을 팝업 방식**으로 띄웁니다.
@@ -117,12 +117,11 @@ import ReactDaumPost from 'react-daumpost-hook';
 자세한 내용은 [Daum Postcode API 가이드](http://postcode.map.daum.net/guide#usage)에서 참고해주시길 바랍니다.
 
 4. **`config (?object)`** : 다음 API에서 제공되는 **config들을 사용하실 경우 제공되는 인터페이스**입니다. 자세한 내용은 [Daum Postcode API 가이드](http://postcode.map.daum.net/guide#usage)에서 참고해주시길 바랍니다.
-   
 5. **`onComplete (function)`** : API 검색 결과를 처리할 함수를 넘겨주시길바랍니다.  
    `config 자체를 안넘길 경우 기본 값은 (data) => console.log(data)입니다.`
 
-**_ref, apiUrl, method, onComplete, config 5가지 인자_** 를 `config` 프로퍼티로 해당 커스텀훅에 넘겨서 API를 설정할 수 있습니다.  
-4가지 중 **_반드시 필요한 속성은 검색결과를 처리할 onComplete 하나_** 입니다. 를 통해서 원하는 위치에 검색창을 삽입하시거나 팝업방식으로 간단히 API를 이용가능하니 참고하셔서 사용해주시고 문의가 있을시 해당 Git Repo에 이슈로 등록해주시길 바랍니다.
+`config` 프로퍼티로 해당 커스텀훅에 넘겨서 API를 설정할 수 있습니다.  
+**_ref, apiUrl, method, onComplete, config 5가지 인자_** 중 **_반드시 필요한 속성은 검색결과를 처리할 onComplete 하나_** 입니다. 를 통해서 원하는 위치에 검색창을 삽입하시거나 팝업방식으로 간단히 API를 이용가능하니 참고하셔서 사용해주시고 문의가 있을시 해당 Git Repo에 이슈로 등록해주시길 바랍니다.
 
 ### LICENSE
 
