@@ -38,6 +38,6 @@
   },
   "homepage": "https://github.com/yoonjonglyu/react-daumpost-hook#readme",
   "dependencies": {
-    "react": "^17.0.2"
+    "isa-util": "^1.0.7"
   }
 }
