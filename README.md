@@ -120,8 +120,7 @@ import ReactDaumPost from 'react-daumpost-hook';
 5. **`onComplete (function)`** : API 검색 결과를 처리할 함수를 넘겨주시길바랍니다.  
    `config 자체를 안넘길 경우 기본 값은 (data) => console.log(data)입니다.`
 
-`config` 프로퍼티로 해당 커스텀훅에 넘겨서 API를 설정할 수 있습니다.  
-**_ref, apiUrl, method, onComplete, config 5가지 인자_** 중 **_반드시 필요한 속성은 검색결과를 처리할 onComplete 하나_** 입니다. 를 통해서 원하는 위치에 검색창을 삽입하시거나 팝업방식으로 간단히 API를 이용가능하니 참고하셔서 사용해주시고 문의가 있을시 해당 Git Repo에 이슈로 등록해주시길 바랍니다.
+**_ref, apiUrl, method, onComplete, config 5가지 인자_** 중 **_반드시 필요한 속성은 검색결과를 처리할 onComplete 하나_** 입니다. **ref** 를 통해서 원하는 위치에 검색창을 삽입하시거나 팝업방식으로 간단히 API를 이용가능하니 참고하셔서 사용해주시고 문의가 있을시 해당 Git Repo에 이슈로 등록해주시길 바랍니다.
 
 ### LICENSE
 
